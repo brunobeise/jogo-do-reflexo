@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jogo do Reflexo</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./form.css" />
   </head>
   <body>
     <div>
       <div id="ball" onclick="onClickBall()" class="bola gray"></div>
 
-      <button onclick="iniciarContador()" id="buttonStart">
-        Iniciar Contador
-      </button>
+      <button onclick="iniciarContador()" id="buttonStart">Iniciar</button>
       <h2 id="result"></h2>
+
+      <form class="d-none" id="form">
+        <label for="nome">Nome</label>
+        <input required name="nome" type="text" />
+
+        <label for="tempo">Tempo (milissegundos)</label>
+        <input id="tempo" required name="tempo" type="number" disabled />
+
+        <label for="email">Email</label>
+        <input required name="email" type="email" />
+
+        <label for="comentarios"></label>
+        <textarea name="comentarios" cols="30" rows="10"></textarea>
+
+        <label for="idade">Idade</label>
+        <input required name="idade" type="number" />
+
+        <label for="genero">Gênero</label>
+        <input type="radio" name="genero" value="Masculino" checked />Masculino
+        <input type="radio" name="genero" value="Feminino" />Feminino
+        <input type="radio" name="genero" value="Outro" />Outro
+
+        <button type="submit">Salvar</button>
+      </form>
+
       <script src="script.js"></script>
     </div>
   </body>
 </html>
++
